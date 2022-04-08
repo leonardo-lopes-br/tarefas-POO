@@ -21,10 +21,6 @@ namespace catalogo{
             void setMaterial(string);
             void setAnoCriacao(int);
 
-            static bool comparaTitulo(const ObraDeArte *, const ObraDeArte *);
-            static bool comparaAnoCriacao(const ObraDeArte *, const ObraDeArte *);
-            static bool obrasIguais(const ObraDeArte *, const ObraDeArte *);
-
         private:
             string titulo, artista, material;
             int anoCriacao;

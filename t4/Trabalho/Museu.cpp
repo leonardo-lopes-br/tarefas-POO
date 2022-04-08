@@ -17,9 +17,9 @@ namespace catalogo{
     int Museu::qtdePinturas(){ return nroPinturas; }
     int Museu::qtdeEsculturas(){ return nroEsculturas; }
 
-    string Museu::getNome() const { return this->nomeDaObra; }
+    string Museu::getNome() const { return this->nome; }
 
-    void Museu::setNome(string novoNome){ this->nomeDaObra = novoNome; }
+    void Museu::setNome(string novoNome){ this->nome = novoNome; }
 
     bool Museu::adicionaObra(ObraDeArte * novaObra){
         unsigned int i = 0;

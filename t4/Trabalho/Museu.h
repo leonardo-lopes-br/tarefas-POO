@@ -21,7 +21,7 @@ namespace catalogo{
             static int qtdeEsculturas();
 
         private:
-            string nomeDaObra;
+            string nome;
             vector <ObraDeArte *> obras;
             static int nroObras;
             static int nroPinturas;
