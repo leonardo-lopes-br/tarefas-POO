@@ -1,0 +1,51 @@
+===============================================================
+Grupo 02 [76,00 de 100,00]
+
+Karen Ketlyn Ferreira Barcelos
+Leonardo da Silva Lopes
+Maria Luiza Edwards de Magalhães Cordeiro
+Marina Lemos da Rocha 
+Vitor Kasai Tanoue
+===============================================================
+
+Classe Pessoa [10,00 de 10,00]
+
+* Implementação OK.
+
+-------------------------------------------------------------
+
+Classe Estudante [13,00 de 15,00]
+
+* O operador "<<" da classe Estudante deveria invocar o operador "<<" da classe Pessoa -- assim não precisaria replicar o mesmo código (impressão de nome e CPF) em duas classes.
+
+-------------------------------------------------------------
+
+Classe Professor [8,00 de 10,00]
+
+* O operador "<<" da classe Professor deveria invocar o operador "<<" da classe Pessoa -- assim não precisaria replicar o mesmo código (impressão de nome e CPF) em duas classes.
+
+-------------------------------------------------------------
+
+Classe DataHorario [23,00 de 25,00]
+
+* Validação no construtor confusa com código repetido (existem dois blocos else que possuem os mesmos comandos).
+
+* Os operadores "<" e "==" estão confusos e custosos (alocação de arrays auxiliares).
+
+-------------------------------------------------------------
+
+Classe Sessao [22,00 de 40,00]
+
+* Problema sério no método ocupa() - cria-se um "clone" da Pessoa que vai comprar o ingresso. 
+
+expectador[linha][coluna] = new Pessoa(person.getNome(), person.getCPF());
+
+Não há necessidade de alocar uma nova Pessoa. O correto seria simplesmente guardar uma referência para o objeto passado como parâmetro.
+
+expectador[linha][coluna] = person
+
+* Por fim, considerando que esses "clones" fossem válidos, o destrutor da classe deveria então liberar a memória ("delete" os clones criados) -- Outra opção seria no método desocupa(). Se não fizer isso, a implementação de vocês, iria consumir muita memória (cada ingresso comprado geraria um "clone" em memória e esses "clones" nunca seriam removidos).
+
+* Apesar de não explícito no enunciado, há justificativa para a existência do atributo "vagas" que armazena quantas vagas disponíveis na sessão. O cálculo das vagas disponíveis (laço for), a cada chamada de método, pode gerar um processamento excessivo. Dessa forma, uma solução mais adequada seria armazenar as vagas disponíveis em um atributo (o método vagas() retornaria o valor desse atributo). Esse atributo seria inicializado com o valor de 210 e seria decrementado/incrementado nos métodos ocupa/desocupa.
+
+* O operador "<<" da classe Sessao deveria invocar o operador "<<" da classe Pessoa (ela já foi implementada e imprime as informações da Pessoa [Nome,CPF]).

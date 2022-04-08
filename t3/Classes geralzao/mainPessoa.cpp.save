@@ -1,0 +1,13 @@
+#include "Pessoa.cpp"
+
+using namespace poo;
+
+int main(void){
+
+    Pessoa p1("Leonardo", "48978806880");
+    p1.Pessoa();
+    cout << p1;
+
+
+	return 0;
+}

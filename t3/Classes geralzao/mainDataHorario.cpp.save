@@ -1,0 +1,15 @@
+#include "DataHorario.cpp"
+#include <stdio.h>
+
+int main(void){
+
+    DataHorario nascimento(10, 4, 2020, 12, 40, 59);
+    DataHorario casamento(10, 4, 2020, 12, 40, 59);
+    cout << nascimento;
+    cout << casamento;
+    if (nascimento <= casamento)
+        printf("Eh menor ou igual!\n");
+
+
+	return 0;
+}

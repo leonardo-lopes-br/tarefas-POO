@@ -1,0 +1,13 @@
+#include "Professor.h"
+
+Professor::Professor(string nome, string cpf, string univ)
+:   nome(nome), CPF(cpf), universidade(univ){}
+
+Professor::~Professor(){}
+
+string Professor::getUniversidade() const { return this->universidade; }
+
+friend ostream& operator<<(ostream& out, const Professor& prof){
+    out << "Nome: " << this->getNome() << endl;
+    out << "CPF: " << this->getCPF()
+}

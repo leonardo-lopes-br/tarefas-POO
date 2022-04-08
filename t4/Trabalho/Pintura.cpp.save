@@ -1,0 +1,29 @@
+#include "Pintura.h"
+#include <iostream>
+using namespace std;
+
+namespace catalogo{
+
+    Pintura::Pintura(string titulo, string artista, string material, int anoCriacao, string tipo)
+    : ObraDeArte()
+    {
+        
+        setTipo(tipo);
+    }
+
+    int Pintura::getCategoria() const{ return 1; }
+
+    void Pintura::imprime() const{
+        string categoria = getCategoria() == 1 ? "Pintura" : "Escultura";
+        cout << "Categoria: " << categoria << endl;
+        cout << "Titulo: " << getTitulo() << endl;
+        cout << "Artista: " << getArtista() << endl;
+        cout << "Ano: " << getAnoCriacao() << endl;
+        cout << "Tipo: " << getTipo() << endl << endl;
+    }
+
+    string Pintura::getTipo() const { return this->tipo; }
+    void Pintura::setTipo(string novoTipo) { this->tipo = novoTipo; }
+}
+
+//int main(void){return 0;}

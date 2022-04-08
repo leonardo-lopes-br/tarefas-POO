@@ -1,0 +1,38 @@
+#include "Estudante.cpp"
+#include "Pessoa.cpp"
+
+int main(void){
+
+    Estudante e1("Leonardo", "48978806880", 761880, 9, 7, 7, 7);
+    string nome = e1.getNome();
+    string cpf = e1.getCPF();
+    int ra = e1.getRA();
+    double p1 = e1.getNotaP1();
+    double p2 = e1.getNotaP2();
+    double t1 = e1.getNotaT1();
+    double t2 = e1.getNotaT2();
+
+    cout << "Printando sem a funcao: \n" << endl;
+    cout << "nome: " << nome << endl;
+    cout << "cpf: " << cpf << endl;
+    cout << "ra: " << ra << endl;
+    cout << "p1: " << p1 << endl;
+    cout << "p2: " << p2 << endl;
+    cout << "t1: " << t1 << endl;
+    cout << "t2: " << t2 << endl;
+
+    cout << endl;
+    cout << "Imprimindo pelo cout: " << endl << endl;
+    cout << e1;
+    cout << endl << endl;
+
+    bool aprovado = e1.aprovado();
+    bool ficouSac = e1.sac();
+    double notaSac = e1.notaSAC();
+    printf("Aluno aprovado? --> %d\n", aprovado);
+    printf("Aluno ficou de rec? --> %d\n", ficouSac);
+    printf("Nota da rec: %f\n")
+
+
+	return 0;
+}

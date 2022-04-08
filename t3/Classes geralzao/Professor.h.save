@@ -1,0 +1,21 @@
+#ifndef PROFESSOR_H_INCLUDED
+#define PROFESSOR_H_INCLUDED
+
+#include "Pessoa.h"
+
+class Professor: public Pessoa {
+
+    public:
+
+        Professor(string, string, string);
+        ~Professor();
+        string getUniversidade() const;
+        
+    
+        
+    private:
+    
+};
+
+
+#endif // PROFESSOR_H_INCLUDED
