@@ -20,4 +20,3 @@ namespace catalogo{
     void Pintura::setTipo(string novoTipo) { this->tipo = novoTipo; }
 }
 
-//int main(void){return 0;}

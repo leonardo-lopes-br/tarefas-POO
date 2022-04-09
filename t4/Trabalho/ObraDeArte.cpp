@@ -31,17 +31,3 @@ namespace catalogo{
         cout << "Ano: " << getAnoCriacao() << endl;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//int main(void){return 0;}

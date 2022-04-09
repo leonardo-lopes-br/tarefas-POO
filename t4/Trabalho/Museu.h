@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include "ObraDeArte.h"
 using std::string;
 using std::vector;
 
